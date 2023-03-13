@@ -1,10 +1,12 @@
 import { Container } from "./common/Container/styled";
+import { Header } from "./common/Header";
 import { Skills } from "./common/Skills";
 import { skills, toLearn } from "./common/Skills/skillsList";
 
 function App() {
   return (
     <Container>
+      <Header />
       <Skills 
       title="My skillset includes 🛠️"
       skills={skills}
