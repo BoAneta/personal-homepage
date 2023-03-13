@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Wrapper = styled.article`
     background-color: ${({ theme }) => theme.color.white};
-    padding: 32px;
+    padding: 32px 0 16px 32px;
     margin: 63px;
 `;
 
 export const Header = styled.h2`
     font-weight: 900;
-    letter-spacing: 0.05em;
+    color: ${({ theme }) => theme.color.mineshaft};
     border-bottom: 1px solid 
     ${({ theme }) => theme.color.ironTransparent};
     padding-bottom: 15px;
@@ -16,19 +16,20 @@ export const Header = styled.h2`
 `;
 
 export const StyledList = styled.ul`
+    list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 8px 32px;
+    grid-gap: 8px;
+    column-gap: 105px;
     padding: 0;
+    line-height: 25px;
 `;
 
 export const StyledListItem = styled.li`
-    display: flex;
-    flex-wrap: wrap;
     color: ${({ theme }) => theme.color.slategray};
     &:before {
         content: "\\25CF";
-        color: ${({theme}) => theme.color.scienceblue};
+        color: ${({ theme }) => theme.color.scienceblue};
         padding-right: 16px;
     }
 `;
