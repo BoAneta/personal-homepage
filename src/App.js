@@ -1,7 +1,7 @@
 import { Container } from "./common/Container/styled";
-import { Header } from "./common/Header";
-import { Skills } from "./common/Skills";
-import { skills, toLearn } from "./common/Skills/skillsList";
+import { Header } from "./features/Header";
+import { Skills } from "./features/Skills";
+import { skills, toLearn } from "./features/Skills/skillsList";
 
 function App() {
   return (
