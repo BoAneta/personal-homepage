@@ -27,6 +27,8 @@ export const StyledList = styled.ul`
 
 export const StyledListItem = styled.li`
     color: ${({ theme }) => theme.color.slategray};
+    display: flex;
+    align-items: center;
     &:before {
         content: "\\25CF";
         color: ${({ theme }) => theme.color.scienceblue};

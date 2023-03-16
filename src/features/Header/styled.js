@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const Wrapper = styled.article`
     max-width: 1098px;
     margin: auto;
-    padding-top: 119px;
     display: grid;
     grid-template-columns: auto 1fr; 
 `;
 
 export const Image = styled.img`
     max-width: 384px;
+    width: 30vw;
 `;
 
 export const About = styled.div`
