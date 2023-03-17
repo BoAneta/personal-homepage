@@ -8,9 +8,9 @@ export const Wrapper = styled.article`
 
 export const Header = styled.h2`
     font-weight: 900;
-    color: ${({ theme }) => theme.color.mineshaft};
+    color: ${({ theme }) => theme.color.black};
     border-bottom: 1px solid 
-    ${({ theme }) => theme.color.ironTransparent};
+    ${({ theme }) => theme.color.irontransparent};
     padding-bottom: 15px;
     margin: 0;
 `;

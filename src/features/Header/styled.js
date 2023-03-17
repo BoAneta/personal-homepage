@@ -25,7 +25,7 @@ export const ThisIs = styled.p`
 
 export const Name = styled.h1`
     font-weight: 900;
-    color: ${({ theme }) => theme.color.mineshaft};
+    color: ${({ theme }) => theme.color.black};
 `;
 
 export const Content = styled.p`

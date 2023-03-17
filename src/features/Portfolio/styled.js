@@ -25,7 +25,7 @@ export const Title = styled(Header)`
 
 export const SubTitle = styled.p`
     font-weight: 400;
-    color: ${({ theme }) => theme.color.mineshaft};
+    color: ${({ theme }) => theme.color.black};
     font-size: 20px;
     margin: 0 0 24px;
 `;
