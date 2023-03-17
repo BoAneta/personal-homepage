@@ -1,4 +1,5 @@
 import { Container } from "./common/Container/styled";
+import { Footer } from "./features/Footer";
 import { Header } from "./features/Header";
 import { ModeSwitcher } from "./features/ModeSwitcher";
 import { Portfolio } from "./features/Portfolio";
@@ -21,6 +22,7 @@ function App() {
         title="Portfolio" 
         subTitle="My recent projects"
       />
+      <Footer />
     </Container>
   );
 }
