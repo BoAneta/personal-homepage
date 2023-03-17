@@ -1,6 +1,7 @@
 import { Container } from "./common/Container/styled";
 import { Header } from "./features/Header";
 import { ModeSwitcher } from "./features/ModeSwitcher";
+import { Portfolio } from "./features/Portfolio";
 import { Skills } from "./features/Skills";
 import { skills, toLearn } from "./features/Skills/skillsList";
 
@@ -16,6 +17,10 @@ function App() {
       <Skills
         title="What I want to learn next 🚀"
         skills={toLearn} />
+      <Portfolio
+        title="Portfolio" 
+        subTitle="My recent projects"
+      />
     </Container>
   );
 }
