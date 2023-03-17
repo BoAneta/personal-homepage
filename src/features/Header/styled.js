@@ -19,8 +19,9 @@ export const About = styled.div`
     padding-top: 64px;
 `;
 
-export const ThisIs = styled.p`
+export const GreyHeader = styled.p`
     font-weight: 700;
+    font-size: 12px;
 `;
 
 export const Name = styled.h1`
