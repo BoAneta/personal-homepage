@@ -37,7 +37,7 @@ export const Content = styled.p`
 `;
 
 export const HireMe = styled.button`
-    border: 1px solid;
+    border: 1px solid ${({ theme }) => theme.color.irontransparent};
     font-size: 20px;
     letter-spacing: 0.05em;
     background-color: ${({ theme }) => theme.color.scienceblue};
@@ -50,6 +50,17 @@ export const HireMe = styled.button`
     display: flex;
     align-items: center;
     text-align: center;
+    transition: 1s;
+
+    &:hover {
+        box-shadow: 0 0 2px 2px
+        ${({ theme }) => theme.color.anakiwa};
+    }
+
+    &:active {
+        box-shadow: 0 -2px 0 0
+        ${({ theme }) => theme.color.parsley};
+    }
 `;
 
 export const HireMeIcon = styled.img`

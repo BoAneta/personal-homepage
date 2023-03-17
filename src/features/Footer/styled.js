@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Content } from "../Header/styled";
-import { GreyHeader } from "../ModeSwitcher/styled";
 import { Title } from "../Portfolio/styled";
 
 export const Container = styled.div`
@@ -12,7 +11,13 @@ export const Container = styled.div`
     margin-left: 62px;
 `;
 
-export const Contact = styled(Title)``;
+export const Contact = styled(Title)`
+    transition: 1s;
+
+    &:hover {
+        color: ${({ theme }) => theme.color.scienceblue};
+    }
+`;
 
 export const FooterContent = styled(Content)`
     color: ${({ theme }) => theme.color.black};

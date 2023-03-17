@@ -11,8 +11,14 @@ export const Tile = styled.div`
     max-width: 592px;
     background-color: ${({ theme }) => theme.color.white};
     border: 6px solid ${({ theme }) => theme.color.irontransparent};
+    border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
+    transition: 1s;
+
+    &:hover {
+        border: 6px solid ${({ theme }) => theme.color.sciencebluelight};
+    }
 `;
 export const Content = styled.div`
     padding: 56px;
@@ -39,4 +45,9 @@ export const Links = styled.a`
     color: ${({ theme }) => theme.color.scienceblue};
     text-decoration: none;
     border-bottom: 1px solid ${({ theme }) => theme.color.sciencebluelight};
+    transition: 0.5s;
+
+    &:hover {
+        color: ${({ theme }) => theme.color.dodgerblue};
+    }
 `;
