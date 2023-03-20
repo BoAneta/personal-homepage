@@ -11,6 +11,10 @@ export const Container = styled.div`
     gap: 24px;
     margin-left: 62px;
 
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        margin: 0;
+    }
+
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         margin: 0;
     }
@@ -33,8 +37,12 @@ export const Icons = styled.div`
     gap: 24px;
     margin-bottom: 110px;
 
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        margin-bottom: 30px;
+    }
+
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
-        margin: 0;
+        margin-bottom: 30px;
     }
 `;
 

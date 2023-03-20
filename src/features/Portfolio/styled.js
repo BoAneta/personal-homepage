@@ -4,6 +4,10 @@ import { Header } from "../Skills/styled";
 export const Section = styled.section`
     margin-bottom: 120px;
 
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        margin-bottom: 48px;
+    }
+
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         margin-bottom: 48px;
     }

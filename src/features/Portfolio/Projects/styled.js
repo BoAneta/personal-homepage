@@ -6,6 +6,10 @@ export const ProjectSection = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-gap: 32px;
 
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        margin: 0;
+    }
+
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         grid-template-columns: 1fr;
         margin: 0;
@@ -28,9 +32,12 @@ export const Tile = styled.div`
 export const Content = styled.div`
     padding: 56px;
 
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        padding: 24px;
+    }
+
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         padding: 24px;
-        font-size: 14px;
     }
 `;
 
@@ -45,6 +52,14 @@ export const Paragraph = styled.p`
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        font-size: 14px;
+    }
 `;
 
 export const LinksName = styled(Paragraph)`

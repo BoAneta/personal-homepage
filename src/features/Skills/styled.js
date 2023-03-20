@@ -5,6 +5,11 @@ export const Wrapper = styled.article`
     padding: 32px 0 16px 32px;
     margin: 63px;
 
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        margin: 30px;
+        padding: 0;
+    }
+
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         margin: 0;
         padding: 0;

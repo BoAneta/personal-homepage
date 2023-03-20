@@ -6,8 +6,13 @@ export const Wrapper = styled.div`
     gap: 12px;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 119px;
+    margin-top: 110px;
     margin-bottom: -38px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        margin-top: 30px;
+        padding: 0;
+    }
 
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         margin: 0;
