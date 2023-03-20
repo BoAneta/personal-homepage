@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Content } from "../Header/styled";
 import { Title } from "../Portfolio/styled";
 
+
 export const Container = styled.div`
     max-width: 670px;
     display: flex;
@@ -29,6 +30,10 @@ export const Icons = styled.div`
     margin-bottom: 110px;
 `;
 
-export const Icon = styled.img`
-    max-width: 48px;
+export const SocialLink = styled.a`
+    transition: 1s;
+
+      &:hover {
+        fill: ${({ theme }) => theme.color.scienceblue};
+    }
 `;
