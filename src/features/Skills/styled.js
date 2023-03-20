@@ -4,6 +4,11 @@ export const Wrapper = styled.article`
     background-color: ${({ theme }) => theme.color.white};
     padding: 32px 0 16px 32px;
     margin: 63px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        margin: 0;
+        padding: 0;
+    }
 `;
 
 export const Header = styled.h2`
@@ -23,6 +28,14 @@ export const StyledList = styled.ul`
     column-gap: 105px;
     padding: 0;
     line-height: 25px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 export const StyledListItem = styled.li`

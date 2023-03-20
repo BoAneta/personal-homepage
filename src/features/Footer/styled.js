@@ -10,6 +10,10 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 24px;
     margin-left: 62px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        margin: 0;
+    }
 `;
 
 export const Contact = styled(Title)`
@@ -28,6 +32,10 @@ export const Icons = styled.div`
     display: flex;
     gap: 24px;
     margin-bottom: 110px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        margin: 0;
+    }
 `;
 
 export const SocialLink = styled.a`

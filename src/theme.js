@@ -12,5 +12,10 @@ export const theme = {
         scienceblue: "#0366D6",
         violet: "#090A33",
         black: "#252525",
+    },
+
+    breakpoint: {
+        mobileMax: 767,
+        desktopMax: 1024,
     }
 };

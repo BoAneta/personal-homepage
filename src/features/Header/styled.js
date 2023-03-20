@@ -5,11 +5,21 @@ export const Wrapper = styled.article`
     margin: auto;
     display: grid;
     grid-template-columns: auto 1fr; 
+
+    
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 export const Image = styled.img`
     max-width: 384px;
     width: 30vw;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        min-width: 133px;
+    }
 `;
 
 export const About = styled.div`
@@ -17,6 +27,12 @@ export const About = styled.div`
     text-align: left;
     margin-left: 66px;
     padding-top: 64px;
+
+    
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        margin: 0;
+        padding-top: 13px;
+    }
 `;
 
 export const GreyHeader = styled.p`

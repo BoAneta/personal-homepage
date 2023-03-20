@@ -5,6 +5,11 @@ export const ProjectSection = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 32px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
 `;
 
 export const Tile = styled.div`
@@ -22,6 +27,11 @@ export const Tile = styled.div`
 `;
 export const Content = styled.div`
     padding: 56px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        padding: 24px;
+        font-size: 14px;
+    }
 `;
 
 export const Title = styled.h3`

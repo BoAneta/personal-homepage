@@ -8,6 +8,11 @@ export const Wrapper = styled.div`
     justify-content: flex-end;
     margin-top: 119px;
     margin-bottom: -38px;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+        margin: 0;
+        padding: 0;
+    }
 `;
 
 export const DarkIcon = styled.img`
