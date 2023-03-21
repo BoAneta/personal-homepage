@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
 export const ThemeButton = styled.button`
     border: none;
-    background-color: ${({ theme }) => theme.color.whitelilac};
+    background-color: ${({ theme }) => theme.color.site.background};
     display: flex;
     gap: 12px;
     align-items: center;
@@ -29,7 +29,7 @@ export const ThemeButton = styled.button`
 `;
 
 export const Text = styled(GreyHeader)`
-    color: ${({theme}) => theme.color.slategray};
+    color: ${({theme}) => theme.color.site.text};
 
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         display: none;

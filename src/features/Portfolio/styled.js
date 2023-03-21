@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
 
 export const GitIcon = styled.img`
     max-width: 40px;
-    color: ${({ theme }) => theme.color.scienceblue};
+    color: ${({ theme }) => theme.color.primary};
 `;
 
 export const Title = styled(Header)`
@@ -33,7 +33,7 @@ export const Title = styled(Header)`
 
 export const SubTitle = styled.p`
     font-weight: 400;
-    color: ${({ theme }) => theme.color.black};
+    color: ${({ theme }) => theme.color.textPrimary};
     font-size: 20px;
     margin: 0 0 24px;
 `;

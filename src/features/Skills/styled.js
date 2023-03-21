@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.article`
-    background-color: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.color.boxBackground};
     padding: 32px 0 16px 32px;
     margin: 63px;
 
@@ -18,9 +18,9 @@ export const Wrapper = styled.article`
 
 export const Header = styled.h2`
     font-weight: 900;
-    color: ${({ theme }) => theme.color.black};
+    color: ${({ theme }) => theme.color.textPrimary};
     border-bottom: 1px solid 
-    ${({ theme }) => theme.color.irontransparent};
+    ${({ theme }) => theme.color.headerLine};
     padding-bottom: 15px;
     margin: 0;
 `;
@@ -44,12 +44,12 @@ export const StyledList = styled.ul`
 `;
 
 export const StyledListItem = styled.li`
-    color: ${({ theme }) => theme.color.slategray};
+    color: ${({ theme }) => theme.color.site.text};
     display: flex;
     align-items: center;
     &:before {
         content: "\\25CF";
-        color: ${({ theme }) => theme.color.scienceblue};
+        color: ${({ theme }) => theme.color.primary};
         padding-right: 16px;
     }
 `;

@@ -6,10 +6,10 @@ export const Header = () => (
     <Wrapper>
         <Image src={myPhoto} />
         <About>
-            <GreyHeader>THIS IS</GreyHeader>
+            <GreyHeader>this is</GreyHeader>
             <Name>Aneta Borowski</Name>
             <Content>👨🏻‍💻  I’m a passionate Frontend Developer in love with React, currently looking for new job opportunities.</Content>
-            <HireMe>
+            <HireMe href="mailto:borowski.aneta@gmail.com" >
                 <HireMeIcon src={hireMeIcon} alt="" />
                 Hire Me
             </HireMe>

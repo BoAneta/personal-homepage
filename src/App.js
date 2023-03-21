@@ -1,7 +1,7 @@
 import { Container } from "./common/Container/styled";
 import { Footer } from "./features/Footer";
 import { Header } from "./features/Header";
-import { ModeSwitcher } from "./features/ModeSwitcher";
+import { ModeSwitcher } from "./common/ModeSwitcher";
 import { Portfolio } from "./features/Portfolio";
 import { Skills } from "./features/Skills";
 import { skills, toLearn } from "./features/Skills/skillsList";

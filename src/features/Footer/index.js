@@ -8,7 +8,7 @@ import { ReactComponent as LinkedIcon } from "./icons/LinkedIN_black.svg";
 
 export const Footer = () => (
     <Container>
-        <GreyHeader>LET'S TALK</GreyHeader>
+        <GreyHeader>let's talko</GreyHeader>
         <Contact>borowski.aneta@gmail.com</Contact>
         <FooterContent>I’m always open to new projects whenever I have the time. If you have a website, dashboard or mobile app in mind and need some help to make your ideas come to life, feel free to conatct me</FooterContent>
         <Icons>

@@ -18,15 +18,15 @@ export const ProjectSection = styled.div`
 
 export const Tile = styled.div`
     max-width: 592px;
-    background-color: ${({ theme }) => theme.color.white};
-    border: 6px solid ${({ theme }) => theme.color.irontransparent};
+    background-color: ${({ theme }) => theme.color.boxBackground};
+    border: 6px solid ${({ theme }) => theme.color.tile.border};
     border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
     transition: 1s;
 
     &:hover {
-        border: 6px solid ${({ theme }) => theme.color.sciencebluelight};
+        border: 6px solid ${({ theme }) => theme.color.tile.borderHover};
     }
 `;
 export const Content = styled.div`
@@ -42,7 +42,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h3`
-    color: ${({ theme }) => theme.color.scienceblue};
+    color: ${({ theme }) => theme.color.primary};
     font-weight: 700;
     font-size:24px;
     margin: 0;
@@ -67,12 +67,12 @@ export const LinksName = styled(Paragraph)`
 `;
 
 export const Links = styled.a`
-    color: ${({ theme }) => theme.color.scienceblue};
+    color: ${({ theme }) => theme.color.link.text};
     text-decoration: none;
-    border-bottom: 1px solid ${({ theme }) => theme.color.sciencebluelight};
+    border-bottom: 1px solid ${({ theme }) => theme.color.link.underline};
     transition: 0.5s;
 
     &:hover {
-        color: ${({ theme }) => theme.color.dodgerblue};
+        color: ${({ theme }) => theme.color.link.hover};
     }
 `;

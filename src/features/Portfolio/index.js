@@ -12,6 +12,8 @@ export const Portfolio = ({ title, subTitle }) => (
         <Projects
             title="Movie Browser" 
             projectDescription="Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search."
+            demoLink="https://boaneta.github.io/todos-list-react/"
+            repoLink="https://github.com/BoAneta/todos-list-react"
         />
     </Section>
 );

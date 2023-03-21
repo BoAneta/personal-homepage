@@ -38,11 +38,12 @@ export const About = styled.div`
 export const GreyHeader = styled.p`
     font-weight: 700;
     font-size: 12px;
+    text-transform: uppercase;
 `;
 
 export const Name = styled.h1`
     font-weight: 900;
-    color: ${({ theme }) => theme.color.black};
+    color: ${({ theme }) => theme.color.textPrimary};
 `;
 
 export const Content = styled.p`
@@ -53,11 +54,11 @@ export const Content = styled.p`
 `;
 
 export const HireMe = styled.button`
-    border: 1px solid ${({ theme }) => theme.color.irontransparent};
+    border: 1px solid ${({ theme }) => theme.color.buttonLink.border};
     font-size: 20px;
     letter-spacing: 0.05em;
-    background-color: ${({ theme }) => theme.color.scienceblue};
-    color: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.color.primary};
+    color: ${({ theme }) => theme.color.buttonLink.text};
     font-size: 20px;
     font-weight: 600;
     margin: 32px 0;
@@ -70,12 +71,12 @@ export const HireMe = styled.button`
 
     &:hover {
         box-shadow: 0 0 2px 2px
-        ${({ theme }) => theme.color.anakiwa};
+        ${({ theme }) => theme.color.buttonLink.shadow};
     }
 
     &:active {
         box-shadow: 0 -2px 0 0
-        ${({ theme }) => theme.color.parsley};
+        ${({ theme }) => theme.color.buttonLink.active};
     }
 `;
 
