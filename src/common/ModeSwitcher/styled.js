@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GreyHeader } from "../../features/Header/styled";
+import { GreyHeader } from "../../features/PersonalHomepage/Header/styled";
 import { ReactComponent as DarkSunIcon} from "./icons/ToggleOff-light.svg";
 
 export const Wrapper = styled.div`
