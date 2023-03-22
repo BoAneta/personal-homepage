@@ -37,12 +37,21 @@ export const lightMode = {
         tile: {
             border: colorName.porcelain,
             borderHover: colorName.tropicalblue,
-            header: colorName.scienceBlue,
+            header: colorName.scienceblue,
         },
         link: {
             text: colorName.scienceblue,
             underline: colorName.sciencebluelight,
             hover: colorName.dodgerblue,
+        },
+        socialIcons: {
+            color: colorName.black,
+            hover: colorName.scienceblue,
+        },
+        modeSwitcher: {
+            background: colorName.mercury,
+            border: colorName.slategray,
+            icon: colorName.slategray,
         },
     },
 
@@ -77,6 +86,15 @@ export const darkMode = {
             text: colorName.scienceblue,
             underline: colorName.sciencebluelight,
             hover: colorName.dodgerblue,
+        },
+        socialIcons: {
+            color: colorName.white,
+            hover: colorName.scienceblue,
+        },
+        modeSwitcher: {
+            background: colorName.slategray,
+            border: colorName.white,
+            icon: colorName.black,
         },
     },
 

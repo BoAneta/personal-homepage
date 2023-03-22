@@ -51,11 +51,15 @@ export const Icons = styled.div`
 `;
 
 export const SocialLink = styled.a`
+    svg path {
+            fill: ${({ theme }) => theme.color.socialIcons.color};
+        }    
     transition: 1s;
+    
 
       &:hover {
         svg path {
-            fill: ${({ theme }) => theme.color.primary};
+            fill: ${({ theme }) => theme.color.socialIcons.hover};
         }    
     }
 `;
