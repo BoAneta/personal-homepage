@@ -42,7 +42,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h3`
-    color: ${({ theme }) => theme.color.primary};
+    color: ${({ theme }) => theme.color.tile.header};
     font-weight: 700;
     font-size:24px;
     margin: 0;
