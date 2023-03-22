@@ -1,11 +1,14 @@
 import { ThemeProvider } from "styled-components";
 import PersonalHomepage from "./features/PersonalHomepage";
 import { GlobalStyle } from "./common/GlobalStyle";
-import { lightMode } from "./common/ModeSwitcher/theme";
+import { darkMode, lightMode } from "./common/ModeSwitcher/theme";
+import { useSelector } from "react-redux";
+import { selectIsDarkMode } from "./common/ModeSwitcher/modeSlice";
 
 function App() {
+  const isDarkMode = useSelector(selectIsDarkMode);
   return (
-    <ThemeProvider theme={lightMode}>
+    <ThemeProvider theme={isDarkMode ? darkMode : lightMode}>
       <GlobalStyle />
       <PersonalHomepage />
     </ThemeProvider>
