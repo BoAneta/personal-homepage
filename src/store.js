@@ -1,8 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
+import createSagaMiddleware from "@redux-saga/core";
 import modeReducer from "./common/ModeSwitcher/modeSlice";
+import { modeSaga } from "./common/ModeSwitcher/modeSaga";
 
-export const store = configureStore({
+const sagaMiddleware = createSagaMiddleware();
+
+const store = configureStore({
     reducer: {
         mode: modeReducer,
     },
+    middleware: [sagaMiddleware],
 });
+
+sagaMiddleware.run(modeSaga);
+export default store;

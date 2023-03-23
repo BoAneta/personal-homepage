@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getModeFromLocalStorage } from "./modeLocalStorage";
 
 const modeSlice = createSlice({
     name: "mode",
     initialState: {
-        isDarkMode: false,
+        isDarkMode: getModeFromLocalStorage(),
     },
     reducers: {
         toggleMode: state => {
