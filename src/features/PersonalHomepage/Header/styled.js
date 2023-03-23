@@ -53,6 +53,10 @@ export const Content = styled.p`
     margin: 0;
 `;
 
+export const Mail = styled.a`
+    text-decoration: none;
+`;
+
 export const HireMe = styled.button`
     border: 1px solid ${({ theme }) => theme.color.buttonLink.border};
     font-size: 20px;

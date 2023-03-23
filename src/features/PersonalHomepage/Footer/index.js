@@ -1,4 +1,4 @@
-import { Contact, Container, FooterContent, Icons, SocialLink } from "./styled";
+import { Contact, Container, FooterContent, Icons, Mail, SocialLink } from "./styled";
 import { GreyHeader } from "../Header/styled";
 import { ReactComponent as FbIcon } from "./icons/Facebook_black.svg";
 import { ReactComponent as GhIcon } from "./icons/Github_black.svg";
@@ -9,7 +9,9 @@ import { ReactComponent as LinkedIcon } from "./icons/LinkedIN_black.svg";
 export const Footer = () => (
     <Container>
         <GreyHeader>let's talk</GreyHeader>
-        <Contact>borowski.aneta@gmail.com</Contact>
+        <Mail href="mailto:borowski.aneta@gmail.com">
+            <Contact>borowski.aneta@gmail.com</Contact>
+        </Mail>
         <FooterContent>I’m always open to new projects whenever I have the time. If you have a website, dashboard or mobile app in mind and need some help to make your ideas come to life, feel free to conatct me</FooterContent>
         <Icons>
             <SocialLink

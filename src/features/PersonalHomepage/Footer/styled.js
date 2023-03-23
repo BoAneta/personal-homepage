@@ -20,6 +20,10 @@ export const Container = styled.div`
     }
 `;
 
+export const Mail = styled.a`
+    text-decoration: none;
+`;
+
 export const Contact = styled(Title)`
     transition: 1s;
 
