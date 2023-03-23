@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 export const Wrapper = styled.article`
     background-color: ${({ theme }) => theme.color.boxBackground};
-    padding: 32px 0 16px 32px;
+    padding: 32px;
     margin: 63px;
 
     @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
-        margin: 30px;
-        padding: 0;
+        margin: 30px 0;
+        padding: 30px;
     }
 
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
-        margin: 0;
-        padding: 0;
+        margin: 30px 0;
+        padding: 30px;
     }
 `;
 
@@ -36,6 +36,7 @@ export const StyledList = styled.ul`
 
     @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
         grid-template-columns: 1fr 1fr;
+        margin-bottom: 0;
     }
 
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
