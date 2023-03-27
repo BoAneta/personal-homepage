@@ -46,6 +46,7 @@ export const Title = styled.h3`
     font-weight: 700;
     font-size:24px;
     margin: 0;
+    text-transform: capitalize;
 `;
 
 export const Paragraph = styled.p`
