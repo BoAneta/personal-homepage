@@ -9,7 +9,7 @@ export const Header = () => (
             <GreyHeader>this is</GreyHeader>
             <Name>Aneta Borowski</Name>
             <Content>👨🏻‍💻  I’m a passionate Frontend Developer in love with React, currently looking for new job opportunities.</Content>
-            <Mail href="mailto:borowski.aneta@gmail.com">
+            <Mail href="mailto:borowski.aneta@gmail.com" title="borowski.aneta@gmail.com">
             <HireMe>
                 <HireMeIcon src={hireMeIcon} alt="" />
                 Hire Me
