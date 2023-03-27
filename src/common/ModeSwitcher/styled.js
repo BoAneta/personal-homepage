@@ -15,6 +15,12 @@ export const ThemeButton = styled.button`
     align-items: center;
     margin-top: 60px;
     margin-bottom: -40px;
+    transition: 0.5s;
+
+    &:hover {
+        border: 1px solid ${({ theme }) => theme.color.modeSwitcher.border};
+        border-radius: 4%;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.desktopMax}px) {
         margin-top: 30px;
