@@ -1,19 +1,30 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchRepositories, selectRepositories, selectRepositoriesStatus } from "../personalHomepageSlice";
 import gitIcon from "./icons/gitIcon.png";
 import { Projects } from "./Projects";
 import { GitIcon, Section, SubTitle, Title, Wrapper } from "./styled";
 
-export const Portfolio = ({ title, subTitle }) => (
+export const Portfolio = () => {
+    const dispatch = useDispatch();
+
+    const repositoriesStatus = useSelector(selectRepositoriesStatus);
+    const repositories = useSelector(selectRepositories);
+
+    useEffect(() => {
+        dispatch(fetchRepositories());
+    }, [dispatch]);
+
+    return (
     <Section>
         <Wrapper>
             <GitIcon src={gitIcon} alt="" />
-            <Title>{title}</Title>
-            <SubTitle>{subTitle}</SubTitle>
+            <Title>Portfolio</Title>
+            <SubTitle>My recent projects</SubTitle>
         </Wrapper>
         <Projects
-            title="Movie Browser" 
-            projectDescription="Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search."
-            demoLink="https://boaneta.github.io/todos-list-react/"
-            repoLink="https://github.com/BoAneta/todos-list-react"
+            status={repositoriesStatus}
+            repositories={repositories}
         />
     </Section>
-);
+)};
