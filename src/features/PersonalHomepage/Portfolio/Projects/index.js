@@ -1,38 +1,16 @@
-import { Content, LinksName, Paragraph, Tile, Title, Links, ProjectSection } from "./styled";
+import { Loading } from "./Loading";
+import { Repos } from "./Repos";
 
-export const Projects = ({ title, projectDescription, demoLink, repoLink }) => (
-    <ProjectSection>
-        <Tile>
-            <Content>
-                <Title>{title}</Title>
-                <Paragraph>{projectDescription}</Paragraph>
-                <LinksName>Demo: <Links href={demoLink}>{demoLink}</Links> </LinksName>
-                <LinksName>Repo: <Links href={repoLink}>{repoLink} </Links></LinksName>
-            </Content>
-        </Tile>
-        <Tile>
-            <Content>
-                <Title>{title}</Title>
-                <Paragraph>{projectDescription}</Paragraph>
-                <LinksName>Demo: <Links href={demoLink}>{demoLink}</Links> </LinksName>
-                <LinksName>Repo: <Links href={repoLink}>{repoLink} </Links></LinksName>
-            </Content>
-        </Tile>
-        <Tile>
-            <Content>
-                <Title>{title}</Title>
-                <Paragraph>{projectDescription}</Paragraph>
-                <LinksName>Demo: <Links href={demoLink}>{demoLink}</Links> </LinksName>
-                <LinksName>Repo: <Links href={repoLink}>{repoLink} </Links></LinksName>
-            </Content>
-        </Tile>
-        <Tile>
-            <Content>
-                <Title>{title}</Title>
-                <Paragraph>{projectDescription}</Paragraph>
-                <LinksName>Demo: <Links href={demoLink}>{demoLink}</Links> </LinksName>
-                <LinksName>Repo: <Links href={repoLink}>{repoLink} </Links></LinksName>
-            </Content>
-        </Tile>
-    </ProjectSection>
-);
+
+export const Projects = ({ status, repositories }) => {
+    switch (status) {
+        case "":
+            return [];
+
+        case "loading":
+            return <Loading />
+        
+        case "success":
+            return <Repos repositories={repositories} />
+    }
+};
