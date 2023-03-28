@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { GreyHeader } from "../../features/PersonalHomepage/Header/styled";
 import { ReactComponent as SunIcon } from "./icons/sun.svg";
 
@@ -58,4 +58,9 @@ export const Icon = styled(SunIcon)`
     padding: 2px;
     width: 20px;
     height:20px;
+    transition: transform 0.3s;
+
+    ${({ moveToRight }) => moveToRight && css`
+        transform: translateX(20px);
+    `}
 `;
