@@ -4,7 +4,7 @@ You can find there all my repositories, also as my contact.
 This application is based on the graphic project designed in Figma.
 
 # Screen Gif
-![Personal Homepage Gif](/package.json)
+![Personal Homepage Gif](/personal-homepage-screen.gif)
 # Languages and Tools used in the project:
 - HTML
 - Normalize
