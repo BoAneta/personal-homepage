@@ -6,16 +6,24 @@ export const Wrapper = styled.article`
     display: grid;
     grid-template-columns: auto 1fr; 
 
-    
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        margin-left: 14px;
+    }
+
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         display: flex;
         flex-direction: column;
+        padding-left: 2px;
     }
 `;
 
 export const Image = styled.img`
     max-width: 384px;
     width: 30vw;
+
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        margin-top: 50px;
+    }
 
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         min-width: 133px;

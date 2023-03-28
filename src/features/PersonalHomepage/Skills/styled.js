@@ -12,7 +12,7 @@ export const Wrapper = styled.article`
 
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         margin: 30px 0;
-        padding: 30px;
+        padding: 16px;
     }
 `;
 

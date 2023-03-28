@@ -57,7 +57,7 @@ export const lightMode = {
 
     breakpoint: {
         mobileMax: 767,
-        desktopMax: 1024,
+        desktopMax: 1160,
     }
 };
 
