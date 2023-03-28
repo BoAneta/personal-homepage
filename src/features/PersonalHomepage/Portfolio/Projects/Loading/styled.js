@@ -1,5 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { ReactComponent as Spinner } from "./spinner.svg";
+
+const rotate = keyframes`
+    to {
+        transform: rotate(360deg);
+    }
+`;
 
 export const Wrapper = styled.div`
     text-align: center;
@@ -12,6 +18,5 @@ export const Wrapper = styled.div`
 
 export const Icon = styled(Spinner)`
     margin-top: 48px;
-    max-width: 160px;
-    max-height: 160px;
+    animation: ${rotate} 1s infinite linear;
 `;
