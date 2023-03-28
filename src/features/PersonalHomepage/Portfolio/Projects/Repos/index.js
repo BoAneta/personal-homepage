@@ -1,16 +1,20 @@
-import { Content, LinksName, Paragraph, Tile, Title, Links, ProjectSection } from "./styled";
+import { LinksName, Description, Tile, Header, Links, Wrapper, LinksWrapper } from "./styled";
 
 export const Repos = ({ repositories }) => (
-    <ProjectSection>
-        {repositories.map(({ id, name, description, homepage, html_url }) => (
-            <Tile key={id}>
-                <Content>
-                    <Title>{name}</Title>
-                    <Paragraph>{description}</Paragraph>
-                    <LinksName>Demo: <Links href={homepage}>{homepage}</Links></LinksName>
-                    <LinksName>Repo: <Links href={html_url}>{html_url}</Links></LinksName>
-                </Content>
-            </Tile>
-        ))}
-    </ProjectSection>
+  <Wrapper>
+    {repositories.map(({ id, name, description, homepage, html_url }) => (
+      <Tile key={id}>
+        <Header>{name.replaceAll("-", " ")}</Header>
+        <Description>{description}</Description>
+        <LinksWrapper>
+          <LinksName>Demo:</LinksName> 
+          <Links href={homepage} target="_blank" rel="noreferrer">Open demo in new page</Links>
+        </LinksWrapper>
+        <LinksWrapper>
+          <LinksName>Code:</LinksName>
+          <Links href={html_url} target="_blank" rel="noreferrer">Open repository in new page</Links>
+        </LinksWrapper>
+      </Tile>
+    ))}
+  </Wrapper>
 );
