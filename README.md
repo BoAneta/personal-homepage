@@ -1,3 +1,25 @@
+# Personal Homepage in React.JS
+This is my Personal Homepage created in React which introduces me and my projects. 
+You can find there all my repositories, also as my contact. 
+This application is based on the graphic project designed in Figma.
+
+# Screen Gif
+![Personal Homepage Gif](/package.json)
+# Languages and Tools used in the project:
+- HTML
+- Normalize
+- BEM
+- CSS (Flex, Grid)
+- JavaScript
+- ES6+ features
+- Node.js
+- React.js
+- Styled-components
+- React Redux-Saga
+- React Redux-Toolkit
+- Promises, Async/Await
+- Axios
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
