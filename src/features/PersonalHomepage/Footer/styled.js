@@ -56,11 +56,10 @@ export const Icons = styled.div`
 
 export const SocialLink = styled.a`
     svg path {
+            transition: 0.3s;
             fill: ${({ theme }) => theme.color.socialIcons.color};
-        }    
-    transition: 1s;
+    }
     
-
       &:hover {
         svg path {
             fill: ${({ theme }) => theme.color.socialIcons.hover};
