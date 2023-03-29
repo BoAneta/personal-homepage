@@ -5,7 +5,6 @@ export const Container = styled.main`
     margin: auto;
 
     @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
-        max-width: 100%;
         padding: 30px;
     }
 

@@ -14,7 +14,7 @@ export const ThemeButton = styled.button`
     gap: 12px;
     align-items: center;
     margin-top: 60px;
-    margin-bottom: -40px;
+    margin-right: 14px;
     transition: 0.5s;
 
     &:hover {
@@ -23,7 +23,6 @@ export const ThemeButton = styled.button`
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.desktopMax}px) {
-        margin-top: 30px;
         padding: 0;
     }
 

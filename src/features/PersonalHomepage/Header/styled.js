@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const Wrapper = styled.article`
     max-width: 1098px;
-    margin: auto;
+    margin: -20px auto 0;
     display: grid;
     grid-template-columns: auto 1fr; 
 
     @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
         margin-left: 14px;
+        padding-top: 0;
     }
 
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
@@ -21,10 +22,6 @@ export const Image = styled.img`
     max-width: 384px;
     width: 30vw;
 
-    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
-        margin-top: 50px;
-    }
-
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         min-width: 133px;
     }
@@ -36,14 +33,17 @@ export const About = styled.div`
     margin-left: 66px;
     padding-top: 64px;
 
-    
+    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+        padding-top: 30px;
+    }
+
     @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
         margin: 0;
         padding-top: 13px;
     }
 `;
 
-export const GreyHeader = styled.p`
+export const GreyHeader = styled.h4`
     font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
