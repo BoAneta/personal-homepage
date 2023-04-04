@@ -1,24 +1,32 @@
 const colorName = {
-        white: "#FFFFFF",
-        whitelilac: "#FBFBFE",
-        anakiwa: "#8CC2FF",
-        parsley: "rgba(20, 70, 32, 0.2)",
-        porcelain: "#F2F3F4",
-        irontransparent: "rgba(209, 213, 218, 0.3)",
-        mercury: "#E5E5E5",
-        slategray: "#6E7E91",
-        shipCove: "#6D93BE",
-        dodgerblue: "#2188FF",
-        tropicalblue: "#CDE0F7",
-        sciencebluelight:"rgba(3, 102, 214, 0.2)",
-        scienceblue: "#0366D6",
-        violet: "#090A33",
-        tundora: "#414141",
-        lightblack: "#313131",
-        black: "#252525",
+    white: "#FFFFFF",
+    whitelilac: "#FBFBFE",
+    anakiwa: "#8CC2FF",
+    parsley: "rgba(20, 70, 32, 0.2)",
+    porcelain: "#F2F3F4",
+    irontransparent: "rgba(209, 213, 218, 0.3)",
+    mercury: "#E5E5E5",
+    slategray: "#6E7E91",
+    shipCove: "#6D93BE",
+    dodgerblue: "#2188FF",
+    tropicalblue: "#CDE0F7",
+    sciencebluelight: "rgba(3, 102, 214, 0.2)",
+    scienceblue: "#0366D6",
+    violet: "#090A33",
+    tundora: "#414141",
+    lightblack: "#313131",
+    black: "#252525",
+}
+
+const commonTheme = {
+    breakpoint: {
+        mobileMax: 767,
+        desktopMax: 1160,
+    }
 }
 
 export const lightMode = {
+    ...commonTheme,
     color: {
         primary: colorName.scienceblue,
         textPrimary: colorName.black,
@@ -53,15 +61,11 @@ export const lightMode = {
             border: colorName.slategray,
             icon: colorName.slategray,
         },
-    },
-
-    breakpoint: {
-        mobileMax: 767,
-        desktopMax: 1160,
     }
 };
 
 export const darkMode = {
+    ...commonTheme,
     color: {
         primary: colorName.dodgerblue,
         textPrimary: colorName.white,
@@ -96,10 +100,5 @@ export const darkMode = {
             border: colorName.white,
             icon: colorName.black,
         },
-    },
-
-    breakpoint: {
-        mobileMax: 767,
-        desktopMax: 1024,
     }
 };
