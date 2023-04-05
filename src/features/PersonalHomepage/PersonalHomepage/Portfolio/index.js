@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchRepositories, selectRepositories, selectRepositoriesStatus } from "../personalHomepageSlice";
+import { fetchRepositories, selectRepositories, selectRepositoriesStatus } from "../../personalHomepageSlice";
 import gitIcon from "./icons/gitIcon.png";
 import { Projects } from "./Projects";
 import { GitIcon, Section, SubTitle, Title, Wrapper } from "./styled";
