@@ -16,14 +16,16 @@ const colorName = {
     tundora: "#414141",
     lightblack: "#313131",
     black: "#252525",
-}
+};
 
 const commonTheme = {
     breakpoint: {
         mobileMax: 767,
-        desktopMax: 1160,
-    }
-}
+        desktopMax: 1199,
+    },
+    boxShadow: "0 -2px 50px rgba(9, 10, 51, 0.02), 0 16px 58px rgba(9, 10, 51, 0.03)",
+    borderRadius: "4px",
+};
 
 export const lightMode = {
     ...commonTheme,
