@@ -16,6 +16,7 @@ const modeSlice = createSlice({
 export const { toggleMode } = modeSlice.actions;
 
 export const selectModeState = state => state.mode;
+
 export const selectIsDarkMode = state => selectModeState(state).isDarkMode;
 
 export default modeSlice.reducer;
