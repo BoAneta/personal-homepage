@@ -1,56 +1,62 @@
 import styled from "styled-components";
+import { SubHeader } from "../SubHeader/styled";
 
-export const Wrapper = styled.article`
+export const Section = styled.section`
     background-color: ${({ theme }) => theme.color.boxBackground};
     padding: 32px;
-    margin: 63px;
+    margin-top: 72px;
+    box-shadow: ${({ theme }) => theme.boxShadow};
+    border-radius: ${({ theme }) => theme.borderRadius};
 
-    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
-        margin: 30px 0;
-        padding: 30px;
-    }
-
-    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
-        margin: 30px 0;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        margin-top: 48px;
         padding: 16px;
     }
 `;
 
-export const Header = styled.h2`
-    font-weight: 900;
-    color: ${({ theme }) => theme.color.textPrimary};
-    border-bottom: 1px solid 
-    ${({ theme }) => theme.color.headerLine};
-    padding-bottom: 15px;
-    margin: 0;
+export const StyledHeader = styled(SubHeader)`
+    padding-bottom: 16px;
+    border-bottom: 1px solid ${({ theme }) => theme.color.headerLine};
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        padding-bottom: 12px;
+    }
 `;
 
-export const StyledList = styled.ul`
+export const List = styled.ul`
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 8px;
-    column-gap: 105px;
+    grid-gap: 8px 32px;
     padding: 0;
-    line-height: 25px;
+    margin-top: 32px;
 
-    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.desktopMax}px) {
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 0;
     }
 
-    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         grid-template-columns: 1fr;
+        font-size: 14px;
+        margin-top: 12px;
     }
 `;
 
-export const StyledListItem = styled.li`
-    color: ${({ theme }) => theme.color.site.text};
+export const Item = styled.li`
     display: flex;
-    align-items: center;
+    line-height: 1.4;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        line-height: 1.2;
+    }
     &:before {
         content: "\\25CF";
         color: ${({ theme }) => theme.color.primary};
         padding-right: 16px;
+
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            width: 6px;
+            margin-right: 8px;
+    }
     }
 `;
