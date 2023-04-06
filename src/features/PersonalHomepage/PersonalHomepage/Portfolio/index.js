@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRepositories, selectRepositories, selectRepositoriesStatus } from "../../personalHomepageSlice";
-import gitIcon from "./icons/gitIcon.png";
 import { Projects } from "./Projects";
-import { GitIcon, Section, SubTitle, Title, Wrapper } from "./styled";
+import { StyledGithubIcon, Section, SubTitle, Header } from "./styled";
+import { SubHeader } from "../SubHeader/styled";
 
 export const Portfolio = () => {
     const dispatch = useDispatch();
@@ -17,11 +17,11 @@ export const Portfolio = () => {
 
     return (
     <Section>
-        <Wrapper>
-            <GitIcon src={gitIcon} alt="" />
-            <Title>Portfolio</Title>
+        <Header>
+            <StyledGithubIcon />
+            <SubHeader>Portfolio</SubHeader>
             <SubTitle>My recent projects</SubTitle>
-        </Wrapper>
+        </Header>
         <Projects
             status={repositoriesStatus}
             repositories={repositories}

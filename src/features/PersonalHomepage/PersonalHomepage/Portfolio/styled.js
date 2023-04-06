@@ -1,39 +1,30 @@
 import styled from "styled-components";
-import { Header } from "../Skills/styled";
+import { ReactComponent as GithubIcon } from "./github.svg"
 
 export const Section = styled.section`
-    margin-bottom: 120px;
+    margin-top: 72px;
 
-    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
-        margin-bottom: 48px;
-    }
-
-    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         margin-bottom: 48px;
     }
 `;
 
-export const Wrapper = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 13px;
-    justify-items: center;
-
-`;
-
-export const GitIcon = styled.img`
-    max-width: 40px;
+export const StyledGithubIcon = styled(GithubIcon)`
     color: ${({ theme }) => theme.color.primary};
+    margin-bottom: 8px;
 `;
 
-export const Title = styled(Header)`
-    border: none;
-    padding: 0;
+export const Header = styled.header`
+    text-align: center;
 `;
 
-export const SubTitle = styled.p`
+export const SubTitle = styled.h3`
     font-weight: 400;
     color: ${({ theme }) => theme.color.textPrimary};
     font-size: 20px;
-    margin: 0 0 24px;
+    margin-top: 8px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 17px;
+    }
 `;
