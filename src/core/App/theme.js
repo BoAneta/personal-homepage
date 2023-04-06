@@ -39,7 +39,7 @@ export const lightMode = {
         buttonLink: {
             text: colorName.white,
             border: colorName.irontransparent,
-            shadow: colorName.shipCove,
+            shadow: colorName.anakiwa,
             active: colorName.parsley,
         },
         boxBackground: colorName.white,
