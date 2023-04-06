@@ -1,20 +1,22 @@
 import styled from "styled-components";
+import { ButtonLink } from "../ButtonLink/styled";
+import { ReactComponent as EnvelopeIcon } from "./images/message.svg";
 
-export const Wrapper = styled.article`
-    max-width: 1098px;
-    margin: -20px auto 0;
+export const Wrapper = styled.header`
+    margin-top: -30px; 
     display: grid;
-    grid-template-columns: auto 1fr; 
+    grid-template-columns: auto 1fr;
+    grid-gap: 64px;
+    align-items: center;
+    
 
-    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
-        margin-left: 14px;
-        padding-top: 0;
+    @media (max-width: ${({ theme }) => theme.breakpoint.desktopMax}px) {
+        grid-gap: 32px;
     }
 
-    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
-        display: flex;
-        flex-direction: column;
-        padding-left: 2px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        grid-template-columns: 1fr;
+        grid-gap: 12px;
     }
 `;
 
@@ -22,52 +24,55 @@ export const Image = styled.img`
     max-width: 384px;
     width: 30vw;
 
-    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         min-width: 133px;
     }
 `;
 
-export const About = styled.div`
-    max-width: 633px;
-    text-align: left;
-    margin-left: 66px;
-    padding-top: 64px;
-
-    @media (max-width: ${({theme}) => theme.breakpoint.desktopMax}px) {
-        padding-top: 30px;
-    }
-
-    @media (max-width: ${({theme}) => theme.breakpoint.mobileMax}px) {
-        margin: 0;
-        padding-top: 13px;
-    }
-`;
-
-export const GreyHeader = styled.h4`
+export const ThisIs = styled.div`
     font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
 `;
 
 export const Name = styled.h1`
+    font-size: 38px;
     font-weight: 900;
     color: ${({ theme }) => theme.color.textPrimary};
+    margin: 12px 0 0 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 22px;
+        margin-top: 8px;
+    }
 `;
 
 export const Content = styled.p`
+    max-width: 640px;
     font-weight: 400;
-    color: ${({ theme }) => theme.color.slategrey};
-    line-height: 28px;
-    margin: 0;
+    line-height: 1.4;
+    margin: 36px 0 0 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.desktopMax}px) {
+        margin-top: 16px;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        margin-top: 16px;
+        max-width: 570px;
+    }
 `;
 
-export const Mail = styled.a`
-    text-decoration: none;
+export const StyledButtonLink = styled(ButtonLink)`
+    display: inline-flex;
+    align-items: center;
+    margin-top: 32px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        margin-top: 24px;
+    }
 `;
 
-export const HireMeIcon = styled.img`
-    color: ${({ theme }) => theme.color.white};
-    max-width: 19.23px;
-    max-height: 17.12px;
-    margin-right: 19px;
+export const HireMeIcon = styled(EnvelopeIcon)`
+    margin-right: 16px;
 `;
