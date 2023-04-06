@@ -1,44 +1,40 @@
 import styled from "styled-components";
+import α from "color-alpha";
 
-export const Wrapper = styled.div`
-    margin: 0 62px 120px;
+export const List = styled.ul`
+    margin-top: 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 32px;
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.desktopMax}px) {
-        margin: 0;
-    }
+    list-style: none;
+    padding: 0;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         grid-template-columns: 1fr;
-        margin: 0;
+        grid-gap: 24px;
     }
 `;
 
-export const Tile = styled.div`
+export const Tile = styled.li`
     background-color: ${({ theme }) => theme.color.boxBackground};
     border: 6px solid ${({ theme }) => theme.color.tile.border};
-    border-radius: 4px;
-    transition: 1s;
+    border-radius: ${({ theme }) => theme.borderRadius};
+    box-shadow: ${({ theme }) => theme.boxShadow};
+    transition: border-color 0.3s;
     padding: 56px;
+    margin: 0;
 
     &:hover {
-        border: 6px solid ${({ theme }) => theme.color.tile.borderHover};
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.desktopMax}px) {
-        padding: 24px;
+        border-color: ${({ theme }) => theme.color.tile.borderHover};
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        padding: 14px;
+        padding: 20px;
     }
 `;
 
 export const Header = styled.h3`
     color: ${({ theme }) => theme.color.tile.header};
-    font-weight: 700;
     font-size: 24px;
     margin: 0;
     text-transform: capitalize;
@@ -49,11 +45,12 @@ export const Header = styled.h3`
 `;
 
 export const Description = styled.p`
-    font-weight: 400;
+    margin-top: 24px;
     line-height: 1.4;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.desktopMax}px) {
         font-size: 14px;
+        margin-top: 16px;
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
@@ -61,33 +58,36 @@ export const Description = styled.p`
     }
 `;
 
-export const LinksWrapper = styled.div`
+export const LinksWrapper = styled.dl`
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: baseline;
     grid-gap: 8px;
+    margin-top: 24px;
+    margin-bottom: 0;
+    line-height: 1.6;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        font-size: 14px;
+        margin-top: 16px;
+    }
 `;
 
-export const LinksName = styled(Description)`
-    margin-bottom: 8px;
-    margin-top:0;
+export const LinksRow = styled.div`
+    display: grid;
+    grid-template-columns: 4em 1fr;
 `;
 
-export const Links = styled.a`
-    font-weight: 400;
-    color: ${({ theme }) => theme.color.link.text};
-    text-decoration: underline ${({ theme }) => theme.color.link.underline};;
-    transition: 0.5s;
+export const LinksValue = styled.dd`
+    margin: 0;
+`;
+
+export const Link = styled.a`
+    color: ${({ theme }) => theme.color.primary};
+    padding-bottom: 1px;
+    text-decoration: none;
+    border-bottom: 1px solid ${({ theme }) => α(theme.color.primary, 0.3)};
+    transition: 0.3s;
 
     &:hover {
-        color: ${({ theme }) => theme.color.link.hover};
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.desktopMax}px) {
-        font-size: 14px;
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        font-size: 14px;
+        border-color: unset;
     }
 `;
