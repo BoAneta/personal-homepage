@@ -1,4 +1,4 @@
-import { Container } from "../../../common/Container/styled";
+import { Container } from "./styled";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { ModeSwitcher } from "../../../common/ModeSwitcher";
@@ -14,10 +14,12 @@ const PersonalHomepage = () => (
       title="My skillset includes 🛠️"
       skills={skills}
     />
-    <Skills
-      title="What I want to learn next 🚀"
-      skills={toLearn} />
-    <Portfolio />
+    <main>
+      <Skills
+        title="What I want to learn next 🚀"
+        skills={toLearn} />
+      <Portfolio />
+    </main>
     <Footer />
   </Container>
 );
