@@ -1,20 +1,22 @@
 import { ButtonLink } from "../../../ButtonLink/styled";
-import { Header, Icon, Paragraph, Website, Wrapper } from "./styled";
+import { Header, Paragraph, Wrapper } from "./styled";
+import { githubUserName } from "../../githubUserName";
+import { ReactComponent as DangerIcon} from "./danger.svg"; 
 
 export const Error = () => (
     <Wrapper>
-        <Icon />
+        <DangerIcon />
         <Header>Ooops! Something went wrong...</Header>
         <Paragraph>
             Sorry, failed to load Github projects.<br />
             You can check then directly on Github.
         </Paragraph>
-        <Website
-            href="https://github.com/BoAneta"
+        <ButtonLink
+            href={`https://github.com/${githubUserName}`}
             title="BoAneta Github"
             target="_blank"
             rel="noreferrer">
-            <ButtonLink>Go to Github</ButtonLink>
-        </Website>
+            Go to Github
+        </ButtonLink>
     </Wrapper>
 );
