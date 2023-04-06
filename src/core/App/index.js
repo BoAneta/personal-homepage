@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
-import PersonalHomepage from "../../features/PersonalHomepage";
+import PersonalHomepage from "../../features/personalHomepage/PersonalHomepage";
 import { GlobalStyle } from "./GlobalStyle";
-import { darkMode, lightMode } from "../../common/ModeSwitcher/theme";
+import { darkMode, lightMode } from "./theme";
 import { Normalize } from "styled-normalize";
-import { selectIsDarkMode } from "../../common/ModeSwitcher/modeSlice";
+import { selectIsDarkMode } from "../../common/modeSlice";
 
 function App() {
   const isDarkMode = useSelector(selectIsDarkMode);
