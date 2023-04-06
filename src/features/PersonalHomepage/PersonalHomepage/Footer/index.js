@@ -1,43 +1,18 @@
-import { Contact, Container, FooterContent, Icons, Mail, SocialLink } from "./styled";
-import { GreyHeader } from "../Header/styled";
-import { ReactComponent as FbIcon } from "./icons/Facebook_black.svg";
-import { ReactComponent as GhIcon } from "./icons/Github_black.svg";
-import { ReactComponent as InstIcon } from "./icons/Instagram_black.svg";
-import { ReactComponent as LinkedIcon } from "./icons/LinkedIN_black.svg";
+import { Contact, Wrapper, FooterContent, Icons, Mail, SocialLink, LetsTalk, Address, EmailWrapper } from "./styled";
+import { SocialIcons } from "./SocialIcons";
 
 
 export const Footer = () => (
-    <Container>
-        <GreyHeader>let's talk</GreyHeader>
-        <Mail href="mailto:borowski.aneta@gmail.com">
-            <Contact>borowski.aneta@gmail.com</Contact>
-        </Mail>
-        <FooterContent>I’m always open to new projects whenever I have the time. If you have a website, dashboard or mobile app in mind and need some help to make your ideas come to life, feel free to conatct me</FooterContent>
-        <Icons>
-            <SocialLink
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://github.com/BoAneta">
-                <GhIcon />
-            </SocialLink>
-            <SocialLink
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://www.facebook.com/aneta.grobelna.56">
-                <FbIcon />
-            </SocialLink>
-            <SocialLink
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://www.instagram.com/zyciolubna/">
-                <InstIcon />
-            </SocialLink>
-            <SocialLink
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://www.linkedin.com/in/aneta-borowski/">
-                <LinkedIcon />
-            </SocialLink>
-        </Icons>
-    </Container>
+    <Wrapper>
+        <LetsTalk>Let's talk!</LetsTalk>
+        <Address>
+            <EmailWrapper>
+                <Contact href="mailto:borowski.aneta@gmail.com">borowski.aneta@gmail.com</Contact>
+            </EmailWrapper>
+            <FooterContent>
+                I’m always open to new projects whenever I have the time. If you have a website, dashboard or mobile app in mind and need some help to make your ideas come to life, feel free to conatct me
+            </FooterContent>
+            <SocialIcons />
+        </Address>
+    </Wrapper>
 );
